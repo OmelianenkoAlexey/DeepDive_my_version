@@ -1,0 +1,90 @@
+@use '../../presets' as *;
+@use '../../mixins' as *;
+
+.services {
+    display: flex;
+    padding-top: 105px;
+    padding-bottom: 100px;
+    background-color: black;
+    opacity: 0.8;
+
+    align-items: center;
+
+    @include sm {
+        // padding-top: 100px;
+        // padding-bottom: 100px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 500;
+        color: white;
+        // opacity: 0.8;
+        padding-bottom: 70px;
+
+        text-align: center;
+
+        @include sm {
+            font-size: 35px;
+            padding-bottom: 50px;
+        }
+
+        &-active {
+            color: #b300fe;
+        }
+    }
+
+    &-box {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px 0px;
+        justify-items: center;
+
+        @include lg {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px 0px;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 280px;
+            gap: 10px;
+            align-items: center;
+
+            &-title {
+                font-size: 25px;
+                text-align: center;
+                color: white;
+                opacity: 0.8;
+            }
+
+            &-picture {
+                max-width: 130px;
+                padding-bottom: 30px;
+                order: -1;
+
+                @include sm {
+                    max-width: 100px;
+                }
+            }
+
+            &-image {
+                width: 100%;
+            }
+
+            &-description {
+                font-size: 15px;
+                color: white;
+                opacity: 0.8;
+                text-align: center;
+            }
+        }
+    }
+}
