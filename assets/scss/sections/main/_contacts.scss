@@ -43,7 +43,8 @@
         align-items: center;
         gap: 50px;
 
-        // background-color: red;
+        background-color: red;
+
         @include md {
             flex-wrap: wrap;
         }
